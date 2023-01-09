@@ -14,6 +14,13 @@ def is_too_small(machine_number, user_number)
     return machine_number > user_number
 end
 
+
+def guess_one_more_time()
+    puts "Try again. What is the number? "
+    guessed_number = gets.chomp
+    return guessed_number.to_i
+end
+
 puts "Hi User! \nWelcome in Guessing Game! \nThe Game Machine is randomizing the number in range 1-100\n
        Would you like to quess the number?(y/n)\n"
 
@@ -32,7 +39,7 @@ if user_answer == "y"
     # guess_result = is_number_the_same(number_from_the_machine, user_number)
 
     while number_from_the_machine != user_number
-        puts "Your number is incorrect :("
+        puts "Your number is incorrect :( \n"
         if is_too_big(number_from_the_machine, user_number)
             puts "Your guess is too big.\n"
             user_number = guess_one_more_time()
@@ -49,10 +56,3 @@ else
 end
 
 puts "\n"
-
-
-def guess_one_more_time()
-    puts "Try again. What is the number? "
-    guessed_number = gets.chomp
-    return guessed_number.to_i
-end
