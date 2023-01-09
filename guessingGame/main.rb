@@ -26,7 +26,7 @@ puts "Hi User! \nWelcome in Guessing Game! \nThe Game Machine is randomizing the
 
 user_answer = gets.chomp
 
-if user_answer == "y"
+while user_answer == "y"
     puts "\nSo let's play the game.Good luck!\n\n"
     number_from_the_machine = random_number_generator()
     # for testing
@@ -49,7 +49,10 @@ if user_answer == "y"
         end
     end
     puts "Your guess is correct!"
-elsif user_answer == "n"
+    puts "Would you like play again?"
+    user_answer = gets.chomp
+end
+if user_answer == "n"
     puts "Fine. The program will close soon."  
 else
     puts "I can't recognize your answer. Please run the script again."
