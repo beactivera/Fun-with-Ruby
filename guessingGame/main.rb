@@ -2,13 +2,11 @@ def random_number_generator()
    return rand(1..100) 
 end
 
-# def is_number_the_same(machine_number, user_number)
-#     return machine_number == user_number
-# end
 
 def is_too_big(machine_number, user_number)
     return machine_number < user_number
 end
+
 
 def is_too_small(machine_number, user_number)
     return machine_number > user_number
@@ -30,13 +28,12 @@ while user_answer == "y"
     puts "\nSo let's play the game.Good luck!\n\n"
     number_from_the_machine = random_number_generator()
     # for testing
-    puts "(---#{number_from_the_machine}---)\n"
+    # puts "(---#{number_from_the_machine}---)\n"
 
     puts "The machine drew a number.\n\n What is the number? "
 
     guessed_number = gets.chomp
     user_number = guessed_number.to_i
-    # guess_result = is_number_the_same(number_from_the_machine, user_number)
 
     while number_from_the_machine != user_number
         puts "Your number is incorrect :( \n"
@@ -52,6 +49,7 @@ while user_answer == "y"
     puts "Would you like play again?"
     user_answer = gets.chomp
 end
+
 if user_answer == "n"
     puts "Fine. The program will close soon."  
 else
