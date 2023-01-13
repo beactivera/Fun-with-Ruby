@@ -18,7 +18,7 @@ counter = 0
 fact = 1
 n = 100000
 for i in 1..n+1
-    puts i 
+    # puts i 
     fact = fact * i
     for code in bytes_as_strings do
         str = fact.to_s
@@ -29,7 +29,7 @@ for i in 1..n+1
         end
     end
     if counter == bytes_as_strings.length()
-        puts "Congratulations, you have founded your Strong Number which is /#{i}!/"
+        puts "Congratulations, you have founded your Strong Number which is #{i}!\n result for #{i}! is #{fact}"
         break
     end
 end
